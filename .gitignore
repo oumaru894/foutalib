@@ -1,0 +1,12 @@
+# ignore .env file
+.env
+
+#ignore venv file 
+storevenv/
+
+# ignore firebase credentials
+foutalib-f623a-firebase-adminsdk-xxkth-90bb923296.json
+
+#ignore node_modules files
+node_modules/
+
