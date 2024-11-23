@@ -1,0 +1,19 @@
+/* PaymentOptions.css */
+.payment-card {
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s;
+    border: 1px solid #dee2e6;
+  }
+  
+  .payment-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .payment-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  

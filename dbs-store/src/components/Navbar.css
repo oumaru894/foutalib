@@ -1,0 +1,260 @@
+.navbar {
+  margin-bottom: 5%; 
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff; 
+  gap:20px;
+  position:fixed;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  z-index: 10000;
+  padding: 0 20px; 
+  box-sizing: border-box;
+  top:0;
+  padding-top: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.navbar-brand-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+
+}
+
+.navbar-brand-section .navbar-brand {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgba(6, 174, 90, 0.5);
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+
+.logo-form{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+  justify-content: space-between;
+ 
+}
+
+.centered-form {
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 50px;
+  width: 50%;
+}
+
+
+.centered-form .form{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+
+}
+
+.search-input {
+  height: 36px;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  padding: 1px;
+  border: none;
+  
+}
+
+
+.ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  
+}
+
+.nav-item {
+  position: relative;
+}
+
+.active-line {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-content NavLink {
+  list-style: none;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bttn {
+  background-color: skyblue;
+  padding: 10px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.bttn p {
+  margin: 0;
+}
+
+
+/* Styles for the search modal */
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styling for individual search result items */
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-result-item:hover {
+  background-color: #f9f9f9;
+}
+
+.search-result-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.search-result-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Add padding to give some spacing within the navbar */
+  }
+
+  /* Navbar items in a row */
+  .ul {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 10px; /* Space between navbar items and the search form */
+  }
+
+  /* Search form below navbar items */
+  .centered-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    
+  }
+
+  .centered-form input, .centered-form .bttn {
+    width: 90%; /* Adjust width to fit within the navbar */
+    max-width: 300px;
+    margin: 5px 0;
+
+  }
+  .sticky{
+    position: fixed;
+    bottom: -10px;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .navbar{
+    position:fixed;
+
+  }
+}

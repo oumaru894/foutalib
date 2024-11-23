@@ -1,0 +1,16 @@
+.upload-section {
+    border: 2px dashed #ced4da;
+    padding: 20px;
+    text-align: center;
+    color: #6c757d;
+    cursor: pointer;
+  }
+  
+  .upload-section:hover {
+    border-color: #007bff;
+  }
+  
+  .contact-options button {
+    min-width: 120px;
+  }
+  

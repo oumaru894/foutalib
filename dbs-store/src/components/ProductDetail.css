@@ -1,0 +1,26 @@
+/* src/components/ProductDetail.css */
+.product-detail {
+    margin-top: 40px;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9900;
+    margin-top: 20px;
+  }
+  
+  .product-description {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  
+  .btn-warning {
+    margin-top: 20px;
+  }
+  

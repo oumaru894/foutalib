@@ -1,0 +1,65 @@
+/* Hero.css */
+body, html {
+  margin: 0; /* Reset default margin */
+  height: 100%; /* Ensure body and html take full height */
+}
+
+.hero-carousal{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  margin:auto;
+  
+}
+
+.hero-container {
+  padding-top: 15px;
+  background-color: #FAFAFC;
+  height: 70%; /* 50% of the viewport height */
+  width: 70%; /* 50% of the viewport width */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: auto; /* Center the container in the viewport */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between; /* Maintain horizontal layout */
+  align-items: center; /* Vertically center within the hero */
+  max-width: 1200px; /* Optional: Limit max width of content */
+  width: 100%; /* Ensure it takes full width of the hero */
+}
+
+.hero-title {
+  font-size: 2.5rem; /* Adjust font size for better fit */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem; /* Adjust font size for better fit */
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FF7754;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem; /* Adjust font size for better fit */
+  cursor: pointer; /* Better UX */
+}
+
+.hero-btn:hover {
+  background-color: #e85b38;
+}
+
+.hero-image {
+  max-width: 100%;
+  border-radius: 10px;
+}

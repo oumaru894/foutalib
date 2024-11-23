@@ -1,0 +1,78 @@
+/* Card.css */
+
+.container{
+    padding-top: 40px
+}
+
+/* In Card.css */
+.col {
+  padding-bottom: 20px; /* Adjust this value as needed */
+}
+
+
+.card-img-top {
+    height: 200px; /* Set a fixed height for images */
+    object-fit:contain;
+  }
+  
+  .card {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Zoom-in effect on hover */
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'Lucida Grande';
+  }
+  
+  .card-text{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+
+  }
+
+  .card-footer {
+    background-color: white;
+    border-top: none;
+  }
+  .cart-wrapper{
+    position: relative;
+    right: 7px;
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    top: 5px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* bottom:5px; 
+    border-radius: 50px;*/
+  }
+  
+  .wrapper{
+    padding: 0  0 9px 0
+  }
+
+  .card-body{
+    flex-direction: row;
+  }
+
+  .add-icon{
+    position: absolute;
+    left: 90%;
+    color:darkslategray
+  }
+  .fav-icon{
+    position:absolute;
+    right: 90%;
+    
+    color:darkslategray;
+    
+  }

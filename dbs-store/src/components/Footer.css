@@ -1,0 +1,20 @@
+/* src/components/Footer.css */
+.footer {
+    padding: 20px 0;
+  }
+  
+  .footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+    color: #f90; /* Change color on hover */
+  }
+  

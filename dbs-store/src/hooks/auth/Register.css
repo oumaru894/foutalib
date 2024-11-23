@@ -1,0 +1,89 @@
+/* Center the register container vertically and horizontally */
+.register-container {
+    background-color: #f8f9fa; /* Light gray background */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card styling */
+  .card {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Form input fields */
+  .form-control {
+    border-radius: 6px; /* Rounded corners for inputs */
+    border: 1px solid #ced4da; /* Neutral gray border */
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .form-control:focus {
+    border-color: #198754; /* Highlighted green border on focus */
+    box-shadow: 0 0 5px rgba(25, 135, 84, 0.5); /* Subtle green glow */
+  }
+  
+  /* Button styling */
+  .btn {
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .btn-success {
+    background-color: #198754; /* Bootstrap green */
+    border-color: #198754;
+  }
+  
+  .btn-success:hover {
+    background-color: #157347; /* Darker green on hover */
+    border-color: #157347;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Bootstrap secondary */
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5c636a; /* Darker secondary on hover */
+    border-color: #5c636a;
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Title styling */
+  h2 {
+    color: #343a40; /* Dark gray */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 576px) {
+    .card {
+      padding: 2rem;
+    }
+  
+    .form-control {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

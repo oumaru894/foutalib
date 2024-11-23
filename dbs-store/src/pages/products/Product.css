@@ -1,0 +1,60 @@
+/* Ensure text wraps and breaks correctly */
+.product-description {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; /* allows wrapping within container */
+  text-decoration: none;
+}
+
+/* Add padding and adjust width for better responsiveness */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn-link{
+  text-decoration: none;
+}
+
+.gallery-image {
+  width: 75px; /* Smaller thumbnails to fit on small screens */
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.fixed-buttons-container{
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+
+@media (max-width: 576px) {
+  .main-image {
+    width: 100%; /* Ensures main image scales on smaller screens */
+  }
+
+  .product-description {
+    font-size: 0.9rem; /* Adjust font size on smaller screens */
+  }
+  /* Fixed button container at the bottom of the page */
+  .fixed-buttons-container {
+    position: fixed;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1000;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .fixed-buttons-container button {
+    width: auto;
+  }
+
+}

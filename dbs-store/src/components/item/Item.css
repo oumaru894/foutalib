@@ -1,0 +1,43 @@
+/* Item.css */
+.item-card {
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding around the content */
+    margin: 15px; /* Margin around the card */
+    text-align: center; /* Center the text */
+    background-color: #fff; /* White background */
+    transition: box-shadow 0.3s; /* Smooth shadow effect */
+  }
+  
+  .item-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  }
+  
+  .item-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .item-name {
+    font-family: 'Poppins', sans-serif; /* Font style */
+    font-size: 1.2rem; /* Font size */
+    margin: 10px 0; /* Space around name */
+  }
+  
+  .price-container {
+    display: flex; /* Flexbox layout for prices */
+    justify-content: flex-start; /* Space between new and old price */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space above price container */
+    gap:15px
+  }
+  
+  .new-price {
+    font-size: 1.5rem; /* Larger font for new price */
+    color: #FF7754; /* Price color */
+  }
+  
+  .old-price {
+    font-size: 1rem; /* Smaller font for old price */
+  }
+  
