@@ -27,6 +27,7 @@ import Register from './hooks/auth/Register.jsx';
 import Profile from './pages/profile/Profile.jsx';
 import Notification from './pages/Notification.jsx';
 import OrderPage from './pages/order/OrderPage.jsx';
+import NotFound from './components/NotFound.jsx';
 
 const Home = () => (
   <>
@@ -72,6 +73,7 @@ const App = () => {
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/notification' element={<Notification/>}/>
         <Route path='/order' elemment={<OrderPage/>}/>
+        <Route path="*" element={<NotFound />} /> {/* Fallback for unmatched paths */}
 
       </Routes>
 
