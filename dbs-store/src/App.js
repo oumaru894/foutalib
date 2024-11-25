@@ -41,51 +41,42 @@ const App = () => {
 
   return (
     <div>
-      {/* Render Navbar and Footer only if not on the /admins route */}
-      {location.pathname !== "/admins" && <Navbar />}
+      {!location.pathname.startsWith("/admins") && <Navbar />}
       
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route path="/product">
           <Route path=":id" element={<Product />} />
         </Route>
-        
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<SocialLogin />} />
         <Route path="/reviewOrder" element={<ReviewOrderPage />} />
         <Route path="/confirmation" element={<OrderConfirmationPage />} />
         
-        {/* Protected admin routes */}
-        <Route path="/admins" element={<ProtectedRoute> <AdminDashboard/> </ProtectedRoute>} />
+        {/* Admin Protected Routes */}
+        <Route path="/admins" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
         <Route path="/admins/add-product" element={<ProtectedRoute><AddProduct /></ProtectedRoute>} />
         <Route path="/admins/add-category" element={<ProtectedRoute><AddCategory /></ProtectedRoute>} />
         <Route path="/admins/add-user" element={<ProtectedRoute><AddUser /></ProtectedRoute>} />
-        <Route path="/search" element={<SearchPage />} />
         
+        <Route path="/search" element={<SearchPage />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="payment/mobile-money" element={<MobileMoneyPaymentPage/>}/>
         <Route path="/invoice/:invoiceId" element={<InvoicePage />} />
-        <Route path="/admin-login" element={<AdminLogin/>}/>
+        <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admins/admin-register" element={<AdminRegister />} />
-        <Route path='/favorite' element={<Favorite/>} />
-        <Route path='/register' element={<Register/>} />
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/notification' element={<Notification/>}/>
-        <Route path='/order' elemment={<OrderPage/>}/>
-        <Route path="*" element={<NotFound />} /> {/* Fallback for unmatched paths */}
-
+        <Route path='/favorite' element={<Favorite />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/notification' element={<Notification />} />
+        <Route path='/order' element={<OrderPage />} />
+        <Route path="*" element={<NotFound />} /> {/* Fallback */}
       </Routes>
 
-      {location.pathname !== "/admins" && <Footer />}
+      {!location.pathname.startsWith("/admins") && <Footer />}
     </div>
   );
 };
-
-const AppWrapper = () => (
-  <Router>
-    <App />
-  </Router>
-);
 
 export default AppWrapper;
