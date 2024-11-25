@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BestSellers from './components/bestSeller/BestSellers';
@@ -21,7 +21,7 @@ import InvoicePage from './pages/payment/Invoice.jsx';
 import ProtectedRoute from './components/ProductRoute.jsx'; // Import ProtectedRoute
 import AdminLogin from './components/admin/AdminLogin.jsx';
 import AdminRegister from './components/admin/AdminRegister.jsx';
-import SearchPage from './components/search/search.jsx'
+import SearchPage from './components/search/search.jsx';
 import Favorite from './pages/favorite.jsx';
 import Register from './hooks/auth/Register.jsx';
 import Profile from './pages/profile/Profile.jsx';
@@ -41,6 +41,7 @@ const App = () => {
 
   return (
     <div>
+      {/* Render Navbar and Footer only if not on the /admins or its subroutes */}
       {!location.pathname.startsWith("/admins") && <Navbar />}
       
       <Routes>
@@ -62,7 +63,7 @@ const App = () => {
         
         <Route path="/search" element={<SearchPage />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="payment/mobile-money" element={<MobileMoneyPaymentPage/>}/>
+        <Route path="/payment/mobile-money" element={<MobileMoneyPaymentPage/>} />
         <Route path="/invoice/:invoiceId" element={<InvoicePage />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admins/admin-register" element={<AdminRegister />} />
@@ -71,7 +72,7 @@ const App = () => {
         <Route path='/profile' element={<Profile />} />
         <Route path='/notification' element={<Notification />} />
         <Route path='/order' element={<OrderPage />} />
-        <Route path="*" element={<NotFound />} /> {/* Fallback */}
+        <Route path="*" element={<NotFound />} /> {/* Fallback for unmatched paths */}
       </Routes>
 
       {!location.pathname.startsWith("/admins") && <Footer />}
@@ -79,4 +80,10 @@ const App = () => {
   );
 };
 
-export default App;
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;
